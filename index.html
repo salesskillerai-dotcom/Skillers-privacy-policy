@@ -16,6 +16,7 @@
     .intro { font-size: 17px; margin: 0 0 32px; }
     section { border-top: 1px solid var(--border); padding-top: 22px; margin-top: 22px; }
     h2 { font-size: 19px; margin: 0 0 10px; }
+    h3 { font-size: 16px; margin: 16px 0 6px; }
     p, li { margin: 0 0 10px; }
     ul { padding-left: 22px; margin: 0 0 10px; }
     a { color: var(--accent); }
@@ -25,11 +26,37 @@
 <body>
   <main>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: October 8, 2026</p>
+    <p class="updated">Last updated: October 28, 2026</p>
     <p class="intro">This policy explains what information Skiller AI collects, how we use it, and the choices you have.</p>
       <section><h2>Information we collect</h2><p>Account information: your name, email address, and how you sign in (email and password, Sign in with Apple, or Google). If you use Sign in with Apple and choose to hide your email, we only receive Apple's private relay address.</p><p>Player profile: the details you enter during setup or in Player Profile — date of birth, gender, height, weight, playing position, strong foot, training days per week and training goals.</p><p>Videos and analysis results: the shot videos you record or import, and the results generated from them, such as body-position measurements, technique scores, estimated ball speed and coaching notes.</p><p>Usage and subscription information: how many analyses you have used, the dates you used them, your remaining free analyses, and your subscription status (plan, renewal and expiry dates).</p><p>Technical information: basic device and app information (such as device model, operating system version and app version) and your IP address, which our service providers process to run and secure the service.</p></section>
       <section><h2>How we use your information</h2><p>To create and secure your account, analyze your shot videos, show your history and progress, manage your free analyses and subscription, and respond to support requests.</p><p>To prevent abuse of the free analyses, for example the same email creating new accounts to get more free analyses.</p><p>We do not sell your personal information, we do not use it for advertising, and we do not track you across other companies' apps or websites.</p></section>
       <section><h2>How your videos are processed</h2><p>When you analyze a shot, the video is sent over an encrypted connection to our analysis server, which automatically detects your body position and the ball to produce your results. This is fully automated.</p><p>While you review the result, the video is held temporarily on our servers. If you save it, the video and its results are stored in your account. Videos you don't save are deleted from our servers automatically, normally within 30 minutes.</p></section>
+
+<section id="video-face-data">
+  <h2>Video, Body-Pose and Face Data</h2>
+
+  <h3>What we collect</h3>
+  <p>When you choose to analyze a football shot, Skiller AI receives the video of that shot. From the video we measure the positions of your body and of the ball in order to produce a score, metrics, a coaching note and a summary.</p>
+
+  <h3>Head points and face data</h3>
+  <p>The body-pose model we use returns 33 body points per frame. Eleven of these are on the head (nose, eyes, ears and mouth corners). We use them only to work out your head and body position for posture feedback. They are used in memory during analysis and are never stored. Your shot video may show your face, as any video of you does. We do not extract, analyze or store face images or facial geometry from it, and we do not perform face recognition. Skiller AI does not identify you from your face and does not use Face ID or ARKit face tracking.</p>
+
+  <h3>Where your video is processed and stored</h3>
+  <p>Your video is analyzed on Skiller AI's own analysis server, hosted on Railway. The analyzed clip is held temporarily in Google Firebase while you review it. If you save a session, the video is stored in Google Firebase, which also provides sign-in. Your saved session record contains only derived results (score, metrics, coaching note, summary, shot power and ball speed). It does not contain body points or face data.</p>
+
+  <h3>No third-party AI and no sale of data</h3>
+  <p>Your video and the data derived from it are not shared with any third-party AI company, and are never sold. Railway and Google Firebase act only as service providers for Skiller AI, and each is bound to protect your data to a standard equal to this policy.</p>
+
+  <h3>How long we keep it</h3>
+  <p>Videos that are analyzed as an unsaved preview, including the temporary copy held in Google Firebase, are deleted within about 30 minutes. Saved videos are kept until you delete the session or delete your account.</p>
+
+  <h3>Consent and deletion</h3>
+  <p>Before your first video is analyzed, the app asks for your consent and sends nothing if you choose "Not now". You can withdraw consent at any time in Account Settings. You can delete a saved session in the app, which deletes its video, or delete your account, which deletes all of your saved videos and sessions.</p>
+
+  <h3>Contact</h3>
+  <p>For questions or requests about your video or data, contact us at <a href="mailto:sales.skillerai@gmail.com">sales.skillerai@gmail.com</a>.</p>
+</section>
+
       <section><h2>Service providers we share data with</h2><p>We only share data with providers that help us run the app, and only for that purpose:</p><ul><li>Google Firebase — sign-in, database, video storage and cloud functions.</li><li>Our analysis server, hosted on Railway — video analysis.</li><li>RevenueCat — managing subscriptions and restoring purchases. It receives your account ID and purchase information, never your card details.</li><li>Apple — App Store payments and Sign in with Apple. Google — Sign in with Google.</li></ul><p>Payments are handled entirely by Apple. We never see or store your payment card details. We may also disclose information if required by law.</p></section>
       <section><h2>Where your data is stored</h2><p>Your data is stored on cloud servers operated by the providers above, which may be located outside your country. Only your own account can read your sessions and videos. This is enforced by our database and storage security rules, not just by the app.</p></section>
       <section><h2>How long we keep your data</h2><p>We keep your data while your account exists. You can delete any session and its video at any time from the History tab or the session's results screen.</p><p>When you delete your account, your profile, sessions, videos and subscription record in our database are deleted automatically.</p><p>To prevent abuse of the free analyses, we keep a one-way, irreversible hash of your email address (not the email itself), along with how many free analyses were used. Apple and RevenueCat keep purchase records under their own policies.</p></section>
